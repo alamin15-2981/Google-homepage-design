@@ -1,0 +1,196 @@
+/* Default css start */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    outline: none;
+}
+body {
+    scroll-behavior: smooth;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Custom css start */
+
+#google-container {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Header area start */
+
+.header {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+.header-list-item {
+    display: flex;
+    align-items: center;
+}
+.header-list-item li {
+    margin-right: 30px;
+}
+.header-list-item li:nth-child(1):hover,
+.header-list-item li:nth-child(2):hover {
+    text-decoration: underline;
+}
+.header-list-item li:last-child > a > img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: outline-offset .2s linear,outline .2s linear;
+}
+.header-list-item li:last-child > a > img:hover {
+    outline: 1px solid gray;
+    outline-offset: 2px;
+}
+
+
+
+/* Main area start */
+
+.main {
+    width: 100%;
+    height: calc(100vh - 220px);
+    text-align: center;
+    padding: 50px 0px;
+}
+.main > img:first-child {
+    margin-bottom: 30px;
+}
+.google-input-box {
+    width: 600px;
+    height: 45px;
+    margin: 0 auto;
+    position: relative;
+}
+.google-input-box > input {
+    width: inherit;
+    height: inherit;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    padding: 5px 40px;
+    text-indent: 10px;
+}
+.google-input-box > input:hover {
+    box-shadow: 3px 3px 2px 0px #f0f0f0;
+}
+.search-icon {
+    position: absolute;
+    top: 16px;
+    left: 18px;
+}
+.microphone-icon {
+    position: absolute;
+    top: 11px;
+    right: 25px;
+}
+.main > a > button {
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    margin: 30px 0px;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+.main > a > button:first-child {
+    margin-right: 10px;
+}
+.main > a > button:last-child {
+    margin-left: 10px;
+}
+.main > a > button:hover {
+    box-shadow: 3px 3px 8px 0px #cdcdcd;
+}
+.main > p > a:hover {
+    text-decoration: underline;
+}
+
+
+/* Footer area start */
+
+.footer {
+    width: 100%;
+    height: 120px;
+}
+.top-footer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 50%;
+    background-color: #F2F2F2;
+    padding: 0px 20px;
+}
+.bottom-footer {
+    height: 50%;
+    background-color: #F2F2F2;
+    border-top: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+}
+.footer-left-items,
+.footer-right-items  {
+    display: flex;
+}
+.footer-left-items li,
+.footer-right-items li {
+    margin-right: 20px;
+}
+.footer-left-items li:hover,
+.footer-right-items li:hover {
+    text-decoration: underline;
+}
+.footer-left-items li:last-child,
+.footer-left-items li:last-child {
+    margin-right: 0px;
+}
+
+
+/* Media Query Css */
+
+@media only screen and (max-width: 768px){
+    .header-list-item li {
+        margin-right: 25px;
+    }
+    .google-input-box {
+        width: 100%;
+    }
+    .main > img:first-child {
+        width: 245px;
+        margin-bottom: 23px;
+    }
+    .google-input-box {
+        width: 98%;
+    }
+    .main > a > button {
+        padding: 10px 13px;
+        margin: 20px 0px;
+    }
+    .main > a > button:first-child,
+    .main > a > button:last-child {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .bottom-footer {
+        overflow: auto;
+    }
+    .footer-left-items, .footer-right-items {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
